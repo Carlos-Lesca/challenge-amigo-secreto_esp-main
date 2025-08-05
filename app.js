@@ -21,12 +21,10 @@ function agregarAmigo() {
             actualizarListaAmigos();
         }
     }
-    return;
 }
 
 function limpiarCaja() {
     document.getElementById("amigo").value = "";
-    return;
 }
 
 function actualizarListaAmigos() {
@@ -36,7 +34,6 @@ function actualizarListaAmigos() {
         let nombre = document.createElement('li');
         nombre.textContent += `${listaAmigos[i]}`;
         lista.appendChild(nombre);
-        return;
     }
 }
 
