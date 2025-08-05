@@ -37,21 +37,22 @@ function actualizarListaAmigos() {
     }
 }
 
+//Funcionalidad al clickear en el botón "Sortear amigo"
 function sortearAmigo() {
     let nombreAleatorio = Math.floor(Math.random()*listaAmigos.length);
 
     if (listaAmigos.length < 2) {
         alert('Debe tener al menos 2 amigos para realizar el sorteo');
     } else {
-        asignarTextoElemento('h2', `El Amigo Secreto es ${listaAmigos[nombreAleatorio]}`)
+        asignarTextoElemento('ul', `El Amigo Secreto es ${listaAmigos[nombreAleatorio]}`)
     }
     return;
 }
 
+//Funcionalidad al clickear en el botón "Reiniciar juego"
 function reiniciarJuego() {
     listaAmigos = [];
     limpiarCaja();
     actualizarListaAmigos();
-    asignarTextoElemento('h2', 'Digite el nombre de sus amigos');
     return;
 }
